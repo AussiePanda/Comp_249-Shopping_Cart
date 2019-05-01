@@ -1,0 +1,27 @@
+% rebase('base.html')
+
+<h1>{{title}}</h1>
+
+<table style="border:5px double black;">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    %for product in data:
+    <tr>
+        <td><a href ="/product/{{product['id']}}">{{product['name']}}</a></td>
+        <td>{{product['quantity']}}</td>
+        <td>{{product['cost']}}</td>
+    </tr>
+    %end
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td>{{cost}}</td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+% rebase('base.html')
+
+<h1>{{data[1]}}</h1>
+ <img src="{{data[4]}}">
+<br>
+<br>
+<ul>
+    <li>Cost: ${{data[6]}}</li>
+    <li>Inventory: {{data[5]}}</li>
+</ul>
+{{!data[2]}}
+
+<form method="POST" action='/cart'>
+    <input type="number" name="quantity" value="0" min="0">
+    <input type="hidden" name="product" value="{{data[0]}}">
+    <input type="submit" value="add to Cart">
+</form>

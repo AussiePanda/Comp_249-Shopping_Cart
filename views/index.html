@@ -1,0 +1,13 @@
+% rebase('base.html')
+
+<h1>{{title}}</h1>
+    %for item in data:
+        <a href ="/product/{{item[0]}}">{{item[1]}}</a>
+    <br>
+        <img src="{{item[4]}}" >
+    <br>
+        Number of stock :{{item[6]}}
+        Cost:${{item[5]}}
+    <br>
+    <br>
+    %end
